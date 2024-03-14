@@ -1,7 +1,7 @@
 import socket
 import threading
 
-HOST = '127.0.0.1'  # Стандартный адрес интерфейса обратной петли (localhost)
+HOST = '127.0.0.1'
 PORT = 8080 
 
 
@@ -14,7 +14,7 @@ def handle_client(client_socket, address):
         response = decoded_data.upper()
         client_socket.sendall(response.encode('utf-8'))
     client_socket.close()
-    
+
 
 def start_server():
     try:
